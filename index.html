@@ -17,6 +17,10 @@
       src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
     }
 
+    body {
+      font-family: hanken;
+    }
+
     .container {
       display: flex;
       height: 725px;
@@ -26,7 +30,7 @@
     }
 
     .scope-inside {
-      width: 800px;
+      width: 700px;
       border-radius: 30px;
       box-shadow: 4px 4px 40px hsl(252, 100%, 67%);
     }
@@ -40,6 +44,7 @@
       background-color: hsla(256, 72%, 46%, 1);
       width: 50%;
       border-radius: 20px;
+      padding: 10px;
     }
 
     .scope-result-inside {
@@ -48,22 +53,77 @@
       flex-direction: column;
     }
 
+    .scope-result-inside>h3 {
+      text-align: center;
+      color: hsl(241, 100%, 89%);
+      padding: 0px 20px;
+      font-family: hanken;
+    }
+
+    .scope-result-inside>h2 {
+      text-align: center;
+      font-size: 35px;
+      color: white;
+      font-family: hanken;
+    }
+
+    .scope-result-inside>p {
+      text-align: center;
+      color: hsl(0, 0%, 64%);
+      font-family: hanken;
+      padding: 0px 45px;
+      margin-top: -20px;
+    }
+
     .scope-result-inside>article {
       background-color: rgb(92, 40, 235);
       text-align: center;
       width: 200px;
       height: 200px;
       margin: auto;
+      border-radius: 50%;
     }
 
-    .scope-result-inside>article>h2 {
-      font-size: 80px;
+    .scope-result-inside>article>article>h3 {
       color: white;
+      font-family: hanken;
+      font-size: 50px;
+      font-weight: 800;
     }
 
-    .scope-result-inside>article>p {
-      margin: -50px;
-      color: hsl(224, 30%, 27%);
+    .scope-result-inside>article>article>p {
+      color: hsl(0, 0%, 64%);
+      font-size: 16px;
+      margin-top: -50px;
+    }
+
+    .scope-summary {
+      padding: 10px 30px;
+    }
+
+    .scope-summary-inside {
+      padding: 10px;
+    }
+
+    .scope-summary-inside>h3 {
+      font-weight: 700;
+      font-family: hanken;
+    }
+
+    .reaction {
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+      background-color: hsla(0, 100%, 67%, 0.2);
+      border-radius: 15px;
+      width: 300px;
+    }
+    .reaction > article{
+      color: hsla(0, 100%, 67%,1);
+      width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
   </style>
 </head>
@@ -76,35 +136,42 @@
           <section class="scope-result-inside">
             <h3>Your Results</h3>
             <article>
-
-              <h2 class="text-result">76</h2>
-              <p class="par-result">of 100</p>
-
+              <article>
+                <h3>76</h3><br>
+                <p>out of 100</p>
+              </article>
             </article>
-            <h3>Great</h3>
+            <h2>Great</h2>
             <p>You scored higher than 65% of the people who have taken these tests</p>
           </section>
-
         </section>
         <section class="scope-summary">
-          <h4>Summary</h4>
-          <article class="reaction">
-            <p>reaction</p>
-            <p>80/100</p>
-          </article>
-          <article class="memory">
-            <p>Memory</p>
-            <p>92/100</p>
-          </article>
-          <article class="verbal">
-            <p>Verbal</p>
-            <p>61/100</p>
-          </article>
-          <article class="visual">
-            <p>Visual</p>
-            <p>72/100</p>
-          </article>
-          <button class="button">Continue</button>
+          <section class="scope-summary-inside">
+            <h3>Summary</h4>
+              <article class="reaction">
+                <article>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                    <path stroke="#F55" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"
+                      d="M10.833 8.333V2.5l-6.666 9.167h5V17.5l6.666-9.167h-5Z" />
+                  </svg>
+                  <p>Reaction</p>
+                </article>
+                <p>80/100</p>
+              </article>
+              <article class="memory">
+                <p>Memory</p>
+                <p>92/100</p>
+              </article>
+              <article class="verbal">
+                <p>Verbal</p>
+                <p>61/100</p>
+              </article>
+              <article class="visual">
+                <p>Visual</p>
+                <p>72/100</p>
+              </article>
+              <button class="button">Continue</button>
+          </section>
         </section>
       </section>
     </section>
