@@ -131,6 +131,10 @@
       display: flex;
     }
 
+    .reaction>.summary-value>#sum-val{
+      font-weight: 800;
+    }
+
     .memory {
       padding: 10px;
       display: flex;
@@ -150,6 +154,10 @@
 
     .memory>.memory-value {
       display: flex;
+    }
+
+    .memory>.memory-value>#memo-val{
+      font-weight: 800;
     }
 
     .verbal {
@@ -172,6 +180,9 @@
     .verbal>.verbal-value {
       display: flex;
     }
+    .verbal>.verbal-value>#ver-val {
+      font-weight: 800;
+    }
 
     .visual {
       padding: 10px;
@@ -192,6 +203,10 @@
 
     .visual>.visual-value {
       display: flex;
+    }
+    
+    .visual>.visual-value>#vis-val {
+      font-weight: 800;
     }
 
     .scope-summary-att {
@@ -246,8 +261,8 @@
                     <p id="title-reaction"></p>
                   </article>
                   <article class="summary-value">
-                    <p id="sum-val"> </p>
-                    <p>/ 100</p>
+                    <p id="sum-val"></p>
+                    <p>&nbsp/ 100</p>
                   </article>
                 </article>
                 <article class="memory">
@@ -257,7 +272,7 @@
                   </article>
                   <article class="memory-value">
                     <p id="memo-val"></p>
-                    <p> / 100</p>
+                    <p>&nbsp / 100</p>
                   </article>
                 </article>
                 <article class="verbal">
@@ -267,7 +282,7 @@
                   </article>
                   <article class="verbal-value">
                     <p id="ver-val"></p>
-                    <p>/ 100</p>
+                    <p>&nbsp/ 100</p>
                   </article>
                 </article>
                 <article class="visual">
@@ -277,7 +292,7 @@
                   </article>
                   <article class="visual-value">
                     <p id="vis-val"> </p>
-                    <p>/ 100</p>
+                    <p>&nbsp/ 100</p>
                   </article>
                 </article>
               </article>
@@ -289,6 +304,7 @@
   </section>
   <script src="data.json"></script>
   <script>
+
     const endpoint = "data.json"
     async function getData() {
       let api = await fetch(endpoint)
